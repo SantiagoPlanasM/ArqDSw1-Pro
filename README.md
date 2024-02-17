@@ -1,8 +1,7 @@
 # proyecto-arqsoft
 
 
-
-> Pararse siempre en la carpeta "frontend-vite"
-
-```npm run dev
-```
+## Alumnos!
+Santiago Planas Montilla
+Augusto Bruno
+Francisco Gomez
