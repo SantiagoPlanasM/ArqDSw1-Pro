@@ -2,6 +2,12 @@
 
 
 ## Alumnos!
-Santiago Planas Montilla
-Augusto Bruno
-Francisco Gomez
+- Santiago Planas Montilla *el maravilla*
+- Augusto Bruno _Silva_
+- Francisco Gomez **mrbeast Argentino**
+
+
+## Materia
+Arquitectura de SoftWare 1 
+
+
