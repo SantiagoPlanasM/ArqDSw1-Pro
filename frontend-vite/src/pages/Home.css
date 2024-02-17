@@ -1,0 +1,95 @@
+body {
+
+    font-family: 'Lato', sans-serif;
+    
+  }
+
+.Planas{
+    
+  content: "";
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    bottom: 5px;
+    left: 15px;
+    background-image: linear-gradient(to bottom right, rgba(206, 195, 132, 0.377), rgba(255, 245, 196, 0.8)), url('https://images7.alphacoders.com/368/368326.jpg');
+    background-size: cover;
+    z-index: -1;
+    
+}
+
+h2{
+    letter-spacing: 2px;
+    font-size: 25px;
+  text-align: center;
+
+    color: #333; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+
+.hoteles {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px ;
+    row-gap: 30px;
+    column-gap: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15 ;
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    
+    
+  }
+  
+  .titulo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .descripcion {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .imagen {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .imagen img {
+    /*max-width: 100%;*/
+    width: auto;
+  height: 300px; /* Establece la altura fija deseada */
+  object-fit: cover; /* Ajusta la imagen al tamaño especificado sin deformarla */
+  border-radius: 15px;
+    
+}
+
+
+
+
+  /* Estilos responsive */
+  @media screen and (max-width: 768px) {
+    .hoteles {
+      grid-template-columns: 1fr;
+    }
+  
+/*Cuando la pantalla sea de telefono ocultamos la imagen*/
+    .imagen {
+      display: none;
+    }
+  }
+
+  .boton{
+    cursor:pointer;
+  }
+
+  .boton:hover {
+    background-color: #ffb300; /* Lighter orange color on hover */
+    transform: translateY(-2px);
+  }
