@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './Hotel.css';
+import { Carousel } from 'react-responsive-carousel';
+import Barra from '../componentes/Barra/Barra';
 
-// librerias para el carrusel de imagenes
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
+
 
 const Hotel = () => {
   const { id } = useParams();
@@ -29,7 +29,7 @@ const Hotel = () => {
     // Para las imagenes es necesario activar/desactivar CORS en el navegador
     const fetchImages = async () => {
       try {
-        const response = await fetch(`http://localhost:8090/hotel/${id}/images/`);
+        const response = await fetch(`http://localhost:8090/hotel/${id}/images`);
         const data = await response.json();
         setImages(data);
         console.log(data)
@@ -49,13 +49,10 @@ const Hotel = () => {
 
   return (
     <div className="home-container">
-      <div className="menu_titulo">
-        <h1>Caminos del Viento</h1>
-      </div>
-
-      <div className="nombre_hotel">
+      
+      <div className="nombre_hotel"><h2>
         {hotel.name}
-        </div>
+        </h2> </div>
       <div className="hotel_descripcion">
         Descripción del Hotel
         <p>{hotel.description}</p>
@@ -65,14 +62,16 @@ const Hotel = () => {
 
 
       <div className="hotel_img">
-      <Slider dots={false} infinite={true} slidesToShow={1} slidesToScroll={1} className="slick-slider">
-         {images &&
-            images.map((image, index) => (
-            <div className="slick-slide" key={index}>
-              <img src={image.url} alt={`Imagen ${index}`} />
-            </div>
-        ))}
-      </Slider>
+      <Carousel showThumbs={false}>
+                {images
+
+                  .map((image, index) => (
+                    <div key={index}>
+                      <img src={image.url} alt={`Imagen ${index}`} />
+                    </div>
+                  ))}
+              </Carousel>
+      
       </div>
 
       <div className="hotel_caracteristica">

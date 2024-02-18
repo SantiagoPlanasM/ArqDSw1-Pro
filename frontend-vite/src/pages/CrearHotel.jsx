@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // importar hot toaster
 import toast, { Toaster } from 'react-hot-toast';
-
+import './CrearHotel.css'
 
 const CrearHotel = () => {
     const [name, setName] = useState('');
@@ -113,7 +113,7 @@ const CrearHotel = () => {
         <div>
           <label>Estrellas:</label>
           <input 
-          type="number"
+          type="text"
            name="stars" 
            value={stars}
             onChange={(e) => setStars(e.target.value)} />

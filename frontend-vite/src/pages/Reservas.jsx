@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './Reservas.css';
 
 const Reservas = () => {
   const [bookings, setBookings] = useState([]);
@@ -63,22 +64,28 @@ const Reservas = () => {
   };
 
   return (
-    <div classname="hotel_caracteristica">
-      <h2>Reservas de todos los usuarios</h2>
-      <ul>
+    <body>
+    <h2>Reservas de todos los usuarios</h2>
+    <div className="hotel_caracteristica">
+      <div className="GrillaSanti">
+      <ul className="GrillaSanti1">
         {bookings.map((booking) => (
-          <li key={booking.id}>
+          <li key={booking.id} className="booking-item">
             {/* Mostrar los detalles de la reserva */}
+            
             <p>ID: #{booking.id}</p>
             <p>ID del Hotel: {booking.hotel_id}</p>
             <p>ID del Usuario: {booking.user_id}</p>
             <p>Fecha de Ingreso: {booking.startdate}</p>
             <p>Fecha de Salida: {booking.enddate}</p>
             <p>Total Abonado: {booking.total_price}</p>
+            
           </li>
         ))}
       </ul>
+      </div>
     </div>
+    </body>
   );
 };
 

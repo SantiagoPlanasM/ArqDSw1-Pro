@@ -1,35 +1,30 @@
-body {
-
-    font-family: 'Lato', sans-serif;
-    background-image: linear-gradient(to bottom right, rgba(206, 195, 132, 0.377), rgba(255, 245, 196, 0.8)), url('https://www.lugaresdenieve.com/sites/default/files/estaciones/valle-nevado_22.jpg');
-    background-size: cover;
-    z-index: -1;
-    
-}
+.hotel_caracteristica {
   
-  
-
-h2{
-    letter-spacing: 2px;
-    font-size: 25px;
-    text-align: center;
-    color: #333; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  padding: 20px;
+ 
 }
 
-.hotel_caracteristica{
-    background-color:#eaeff5d8;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+.booking-item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-  }
+.booking-item p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.GrillaSanti{
+ 
+  border-color: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   
-  li {
-    margin-bottom: 10px;
-    margin-right: 5px;
+}
+.GrillaSanti1{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr); 
   }

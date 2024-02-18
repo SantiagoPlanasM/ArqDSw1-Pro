@@ -58,7 +58,7 @@ CREATE TABLE `hotels` (
   `name` varchar(50) NOT NULL,
   `adress` varchar(100) NOT NULL,
   `city` varchar(100) DEFAULT NULL,
-  `stars` char(1) NOT NULL,
+  `stars` int(1) NOT NULL,
   `description` varchar(255) NOT NULL,
   `price` float NOT NULL,
   `parking` tinyint(1) NOT NULL,
