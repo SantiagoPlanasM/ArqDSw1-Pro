@@ -85,9 +85,8 @@ const CrearHotel = () => {
   };
 
   return (
-    <div className='genereal'>
-      <h1>Crear Hotel</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='genereal'>  
+      <form onSubmit={handleSubmit} className='hotel'>
         <div className='nombre'>
           <label>Nombre:</label>
           <input 
@@ -121,9 +120,7 @@ const CrearHotel = () => {
            onChange={(e) => setDescription(e.target.value)} />
         </div>
 
-        <div className='aminities'>
-
-        <div className='estrellas'>
+        <div className='estellas'>
           <label>Estrellas:</label>
           <input 
           type="number"
@@ -132,23 +129,26 @@ const CrearHotel = () => {
             onChange={(e) => setStars(e.target.value)} />
         </div>
       
-        <div>
+          <div className='precio'>
           <label>Precio:</label>
           <input
            type="number" 
            name="price" 
            value={price} 
            onChange={(e) => setPrice(e.target.value)} />
-        </div>
-        <div>
+          </div>
+
+      
+          <div className='habi'>
           <label>Habitaciones:</label>
           <input 
           type="number"
            name="rooms"
             value={rooms} 
             onChange={(e) => setRooms(e.target.value)} />
-        </div>
-        <div>
+          </div>
+        
+          <div className='aminities'>
           <label>Parking:</label>
           <input
             type="checkbox"
@@ -156,51 +156,52 @@ const CrearHotel = () => {
             checked={parking}
             onChange={(e) => setParking(e.target.checked)}
           />
-        </div>
-        <div>
+        
+        
           <label>Piscina:</label>
           <input 
           type="checkbox"
            name="pool" 
            checked={pool} 
            onChange={(e) => setPool(e.target.checked)} />
-        </div>
-        <div>
+        
+      
           <label>Wifi:</label>
           <input 
           type="checkbox" 
           name="wifi" 
           checked={wifi}
             onChange={(e) => setWifi(e.target.checked)} />
-        </div>
-        <div>
+        
+        
           <label>Aire acondicionado:</label>
           <input
            type="checkbox" 
            name="air" 
            checked={air} 
            onChange={(e) => setAir(e.target.checked)} />
-        </div>
-        <div>
+        
+        
           <label>Gimnasio:</label>
           <input 
           type="checkbox"
            name="gym" 
            checked={gym} 
            onChange={(e) => setGym(e.target.checked)} />
-        </div>
-        <div>
+        
+        
           <label>Spa:</label>
           <input
            type="checkbox" 
            name="spa"
             checked={spa} 
             onChange={(e) => setSpa(e.target.checked)} />
-        </div>
+        
 
         </div>
-
-        <button type="submit">Crear Hotel</button>
+       
+        <button className='botonS' type="submit">Crear Hotel</button>
+        
       </form>
       <Toaster position="top-center" reverseOrder={false} />
     </div>

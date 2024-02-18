@@ -12,7 +12,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right, rgba(255, 184, 108, 0.5), rgba(255, 166, 0, 0.511)), url('tu-url-de-imagen');
+  background-image: linear-gradient(to bottom right, rgba(207, 176, 143, 0.5), rgba(237, 185, 88, 0.511)), url('tu-url-de-imagen');
   background-size: cover;
   z-index: -1;
 }
