@@ -2,6 +2,7 @@ package services
 
 import (
 	userCliente "go-pro/clients/user"
+	"time"
 
 	"github.com/dgrijalva/jwt-go"
 	log "github.com/sirupsen/logrus"
@@ -175,6 +176,7 @@ func (s *userService) LoginUser(loginDto dto.LoginDto) (dto.TokenDto, e.ApiError
 		//se firma el token para verificar autenticidad
 		token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 			"id_user": user.Id,
+			"exp":     time.Now().Add(time.Hour).Unix(),
 		})
 		tokenString, _ := token.SignedString(jwtKey)
 		tokenDto.Token = tokenString

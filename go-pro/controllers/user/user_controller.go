@@ -75,5 +75,7 @@ func LoginUser(c *gin.Context) {
 		c.JSON(er.Status(), er)
 		return
 	}
+	c.SetSameSite(http.SameSiteLaxMode)
+	c.SetCookie("authorizarion", tokenDto.Token, 3600, "", "", false, true)
 	c.JSON(http.StatusCreated, tokenDto)
 }
