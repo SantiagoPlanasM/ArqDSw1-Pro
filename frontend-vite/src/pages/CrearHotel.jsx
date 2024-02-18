@@ -1,7 +1,9 @@
+import './CrearHotel.css'
+
 import React, { useEffect, useState } from 'react';
 // importar hot toaster
 import toast, { Toaster } from 'react-hot-toast';
-import './CrearHotel.css'
+
 
 const CrearHotel = () => {
     const [name, setName] = useState('');
@@ -83,10 +85,10 @@ const CrearHotel = () => {
   };
 
   return (
-    <div>
+    <div className='genereal'>
       <h1>Crear Hotel</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='nombre'>
           <label>Nombre:</label>
           <input 
           type="text"
@@ -94,7 +96,7 @@ const CrearHotel = () => {
             value={name} 
             onChange={(e) => setName(e.target.value)}  />
         </div>
-        <div>
+        <div className='direccion'>
           <label>Dirección:</label>
           <input 
           type="text" 
@@ -102,7 +104,7 @@ const CrearHotel = () => {
           value={address} 
           onChange={(e) => setAddress(e.target.value)} />
         </div>
-        <div>
+        <div className='ciudad'>
           <label>Ciudad:</label>
           <input 
           type="text" 
@@ -110,21 +112,26 @@ const CrearHotel = () => {
           value={city} 
           onChange={(e) => setCity(e.target.value)} />
         </div>
-        <div>
-          <label>Estrellas:</label>
-          <input 
-          type="text"
-           name="stars" 
-           value={stars}
-            onChange={(e) => setStars(e.target.value)} />
-        </div>
-        <div>
+
+        <div className='descripcion'>
           <label>Descripción:</label>
-          <textarea 
+          <input
           name="description"
            value={description} 
            onChange={(e) => setDescription(e.target.value)} />
         </div>
+
+        <div className='aminities'>
+
+        <div className='estrellas'>
+          <label>Estrellas:</label>
+          <input 
+          type="number"
+           name="stars" 
+           value={stars}
+            onChange={(e) => setStars(e.target.value)} />
+        </div>
+      
         <div>
           <label>Precio:</label>
           <input
@@ -190,6 +197,9 @@ const CrearHotel = () => {
             checked={spa} 
             onChange={(e) => setSpa(e.target.checked)} />
         </div>
+
+        </div>
+
         <button type="submit">Crear Hotel</button>
       </form>
       <Toaster position="top-center" reverseOrder={false} />
