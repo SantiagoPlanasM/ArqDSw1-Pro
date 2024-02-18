@@ -42,4 +42,5 @@
   .botonS{
     margin-left: 25%;
     margin-top: 15px;
-    grid-area: botonS;}
+    grid-area: botonS;
+    cursor:pointer;}

@@ -58,7 +58,7 @@ const CrearHotel = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, adress, city, stars, description, price, rooms, parking, pool, wifi, air, gym, spa }),
+            body: JSON.stringify({ name, adress, city, stars: parseInt(stars), description, price: parseFloat(price), rooms: parseInt(stars), parking, pool, wifi, air, gym, spa }),
         }
             )
         if (response.ok) {
@@ -199,9 +199,9 @@ const CrearHotel = () => {
         
 
         </div>
-       
-        <button className='botonS' type="submit">Crear Hotel</button>
-        
+        <div className='botonS' >
+          <button type="submit">Crear Hotel</button>
+        </div>
       </form>
       <Toaster position="top-center" reverseOrder={false} />
     </div>

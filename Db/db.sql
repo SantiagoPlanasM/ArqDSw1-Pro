@@ -75,11 +75,12 @@ CREATE TABLE `hotels` (
 --
 
 INSERT INTO `hotels` (`id`, `name`, `adress`, `city`, `stars`, `description`, `price`, `parking`, `pool`, `wifi`, `air`, `gym`, `spa`, `rooms`) VALUES
-(1, 'Hotel del Viento - Islas Canarias', 'Avenida Gran Canaria 38 .  35100 Playa del Inglés España', 'Islas Canarias', 4, 'Nuestra sede de Hotel del Viento en Islas Canarias está ubicado en Playa del Inglés, una de las zonas turísticas más populares en el sur de la isla de Gran Canaria. Visita este gran hotel vacacional, garantía de unas divertidas vacaciones para todos.', 130, 1, 1, 1, 1, 1, 0, 5),
-(2, 'Hotel del Viento - Benidorm', 'Av. de Filipinas, 10, 03503 Benidorm España', 'Benidorm', 5, 'Nuestra sede de Hotel del Viento en Benidorm te acerca a lo mejor de Benidorm, tratando de que disfrutes de una estancia relajante y agradable. Siendo uno de los hoteles más premium de toda España y brindando el mejor servicio del país.', 160, 1, 1, 1, 1, 0, 0, 4),
-(4, 'Hotel del Viento - Caribe', 'Calle Sanchez, 94000 ', 'Santo Domingo', 4, 'Nuestra sede en el Caribe, uno de los mejores lugares para pasar tu estadia cerca de las mejores playas del mundo. El establecimiento se encuentra a 600 metros de la playa Cocolandia y a 800 metros de la playa Palenque.', 200, 1, 1, 0, 0, 0, 0, 2),
-(5, 'Hotel del Viento - Milan', 'Via Cimarosa 13, 48015 Milano Marittima', 'Milan', 3, 'Nuestra sede en Italia. Se encuentra frente a la playa de Milano Marittima. Los huéspedes reciben descuentos en las instalaciones de playa cercanas. La estación de tren de Cervia está a 2 km. Nuestros clientes dicen que esta parte de Milan es su favorita.', 150, 1, 1, 0, 0, 0, 0, 1);
-
+(1, 'Hotel De la isla - Islas Canarias', 'Avenida Gran Canaria 38 .  35100 Playa del Inglés España', 'Islas Canarias', 4, 'Nuestra sede de Hotel del Viento en Islas Canarias está ubicado en Playa del Inglés, una de las zonas turísticas más populares en el sur de la isla de Gran Canaria. Visita este gran hotel vacacional, garantía de unas divertidas vacaciones para todos.', 130, 1, 1, 1, 1, 1, 0, 5),
+(2, 'Hotel Buirm - Benidorm', 'Av. de Filipinas, 10, 03503 Benidorm España', 'Benidorm', 5, 'Nuestra sede de Hotel del Viento en Benidorm te acerca a lo mejor de Benidorm, tratando de que disfrutes de una estancia relajante y agradable. Siendo uno de los hoteles más premium de toda España y brindando el mejor servicio del país.', 160, 1, 1, 1, 1, 0, 0, 4),
+(3, 'Hotel Los Cocos - Caribe', 'Calle Sanchez, 94000 ', 'Santo Domingo', 4, 'Nuestra sede en el Caribe, uno de los mejores lugares para pasar tu estadia cerca de las mejores playas del mundo. El establecimiento se encuentra a 600 metros de la playa Cocolandia y a 800 metros de la playa Palenque.', 200, 1, 1, 0, 0, 0, 0, 2),
+(4, 'Hotel De la Cruz - Milan', 'Via Cimarosa 13, 48015 Milano Marittima', 'Milan', 3, 'Nuestra sede en Italia. Se encuentra frente a la playa de Milano Marittima. Los huéspedes reciben descuentos en las instalaciones de playa cercanas. La estación de tren de Cervia está a 2 km. Nuestros clientes dicen que esta parte de Milan es su favorita.', 150, 1, 1, 0, 0, 0, 0, 1),
+(5, 'Hotel Playa Bonita - Barcelona', 'Carrer de la Marina, 19, 08005 Barcelona España', 'Barcelona', 4, 'El Hotel Playa Bonita te ofrece una estancia espectacular junto a la playa de Barcelona. Disfruta de la hermosa vista al mar Mediterráneo y de las comodidades de este hotel de 4 estrellas.', 180, 1, 1, 1, 1, 0, 0, 3),
+(6, 'Hotel Montaña Azul - Andorra', 'Carrer Prat de la Creu, 15, AD500 Andorra la Vella', 'Andorra la Vella', 3, 'Ubicado en el corazón de Andorra la Vella, el Hotel Montaña Azul te ofrece una estancia acogedora y tranquila en las montañas. Disfruta de la naturaleza y las actividades al aire libre durante tu estancia en este hotel de 3 estrellas.', 120, 1, 0, 1, 1, 1, 0, 2);
 -- --------------------------------------------------------
 
 --
@@ -101,11 +102,12 @@ INSERT INTO `images` (`id`, `url`, `hotel_id`) VALUES
 (2, 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/e9/ce/cf/hotel-presidente-4s-habitacion.jpg?w=1200&h=-1&s=1', 2),
 (3, 'https://static.barcelo.com/content/dam/bhg/master/es/hoteles/spain/canarias/gran-canaria/occidental-margaritas/galeria/piscina/BMAR_POOL_06.jpg.bhgimg.stripe1000.jpg/1658834787901.jpg', 1),
 (4, 'https://static.barcelo.com/content/dam/bhg/master/es/hoteles/spain/canarias/gran-canaria/occidental-margaritas/galeria/habitaciones/BMAR_ROOM_01.jpg.bhgimg.stripe1000.jpg/1658834448420.jpg', 1),
-(5, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/201912067.jpg?k=8c77b0483b21335bf11980e76f1be3e9e2ab9d155d282f70eaf9c3f43272494a&o=&hp=1', 4),
-(6, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/200856460.jpg?k=727b091f6b86375191fc5cb68367bffb690711bad162cedb45a7de151ac0763d&o=&hp=1', 4),
-(7, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/306834049.jpg?k=d16d69f6623388e716703416bdb2a0b10754aae4c7b36c28098d8bf434fd5b56&o=&hp=1', 5),
-(8, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/367950216.jpg?k=9040e8b910eda4fa6ca4dcfc74a8d80ed8df8de7ffd39d2c1675272577ba908b&o=&hp=1', 5);
-
+(5, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/201912067.jpg?k=8c77b0483b21335bf11980e76f1be3e9e2ab9d155d282f70eaf9c3f43272494a&o=&hp=1', 3),
+(6, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/200856460.jpg?k=727b091f6b86375191fc5cb68367bffb690711bad162cedb45a7de151ac0763d&o=&hp=1', 3),
+(7, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/306834049.jpg?k=d16d69f6623388e716703416bdb2a0b10754aae4c7b36c28098d8bf434fd5b56&o=&hp=1', 4),
+(8, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/367950216.jpg?k=9040e8b910eda4fa6ca4dcfc74a8d80ed8df8de7ffd39d2c1675272577ba908b&o=&hp=1', 4),
+(9, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Ffotos%2Fhotel-playa-mazatlan&psig=AOvVaw3LhTdmSVB5VXbFbu6DZnFg&ust=1708384480761000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIiQ1aKCtoQDFQAAAAAdAAAAABAE', 5),
+(10, 'https://graziamagazine.com/mx/wp-content/uploads/sites/13/2022/11/On-The-Slope-Exterior-Shot-Ultima-Courchevel-Belvedere.jpg', 6);
 -- --------------------------------------------------------
 
 --
