@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const CrearHotel = () => {
     const [name, setName] = useState('');
-    const [address, setAddress] = useState('');
+    const [adress, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [stars, setStars] = useState(0);
     const [description, setDescription] = useState('');
@@ -39,7 +39,7 @@ const CrearHotel = () => {
 
     if (name === '') {
         document.getElementById('inputNombreHotel').style.borderColor = 'red';
-      } else if (address === '') {
+      } else if (adress === '') {
         document.getElementById('inputDireccionHotel').style.borderColor = 'red';
       } else if (city === '') {
         document.getElementById('inputCiudadHotel').style.borderColor = 'red';
@@ -58,7 +58,7 @@ const CrearHotel = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, address, city, stars, description, price, rooms, parking, pool, wifi, air, gym, spa }),
+            body: JSON.stringify({ name, adress, city, stars, description, price, rooms, parking, pool, wifi, air, gym, spa }),
         }
             )
         if (response.ok) {
@@ -100,7 +100,7 @@ const CrearHotel = () => {
           <input 
           type="text" 
           name="address" 
-          value={address} 
+          value={adress} 
           onChange={(e) => setAddress(e.target.value)} />
         </div>
         <div className='ciudad'>
