@@ -29,3 +29,37 @@ func IsAdmin(c *gin.Context) {
 	// If the user is admin, continue with the request
 	c.Next()
 }
+
+//Idea no podida implementar por no usar axios
+/*var jwtKey = []byte("secretkey")
+
+func Validate(c gin.Context) {
+    // get cookie
+    tokenString, err := c.Cookie("authorizarion")
+
+    if err != nil {
+        c.AbortWithStatus(http.StatusUnauthorized)
+    }
+    token, err := jwt.Parse(tokenString, func(tokenjwt.Token) (interface{}, error) {
+        if , ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
+            return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
+        }
+
+        return jwtKey, nil
+    })
+    if err != nil  token == nil  !token.Valid {
+        c.AbortWithStatus(http.StatusUnauthorized)
+        return
+    }
+
+    if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
+        fmt.Print(claims["exp"])
+        //check expiration
+        if float64(time.Now().Unix()) > claims["exp"].(float64) {
+            c.AbortWithStatus(http.StatusUnauthorized)
+        }
+
+        c.JSON(http.StatusOK, gin.H{"message": "im logged in"})
+        c.Next()
+    }
+}*/
