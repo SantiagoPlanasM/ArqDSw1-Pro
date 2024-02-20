@@ -30,7 +30,7 @@ func IsAdmin(c *gin.Context) {
 	c.Next()
 }
 
-//Idea no podida implementar por no usar axios
+//no implementar por no usar axios
 /*var jwtKey = []byte("secretkey")
 
 func Validate(c gin.Context) {

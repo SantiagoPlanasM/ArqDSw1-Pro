@@ -27,7 +27,7 @@ margin-top: 20px;
 th, td {
 text-align: left;
 padding: 8px;
-border-bottom: 1px solid #ddd;
+border-bottom: 1px solid #000000;
 }
 
 th {
@@ -35,7 +35,7 @@ background-color:  #f5a835;
 color: white;
 }
 
-tr:nth-child(even) {
+tr {
 background-color: #f2f2f2;
 }
 
